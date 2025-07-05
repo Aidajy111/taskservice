@@ -32,6 +32,7 @@ func main() {
 
 	r := chi.NewRouter()
 	r.Post("/tasks", application.HandleCreateTask)
+	r.Get("/tasks", application.HandleGetTasks)
 	r.Get("/", application.HandleMain)
 
 	srv := http.Server{
